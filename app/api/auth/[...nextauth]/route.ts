@@ -45,7 +45,6 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_SECRET!,
     }),
   ],
-
   pages: {
     signIn: "/auth",
   },
