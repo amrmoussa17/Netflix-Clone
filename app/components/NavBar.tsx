@@ -24,7 +24,7 @@ const NavBar = () => {
       if (window.scrollY >= TOP_OFFSET) {
         setShowBackground(true)
       } else {
-        setShowBackground(true)
+        setShowBackground(false)
       }
     }
     window.addEventListener("scroll", handleScroll)
