@@ -1,9 +1,12 @@
+"use client"
 import { BsFillPlayFill } from "react-icons/bs"
 import FavoriteButton from "./FavoriteButton"
+import { useRouter } from "next/navigation"
 interface Props {
   data: Record<string, any>
 }
 const MovieCard = ({ data }: Props) => {
+  const router = useRouter()
   return (
     <div className="group bg-zinc-900 relative w-full h-[12vw]">
       <img
@@ -35,7 +38,9 @@ const MovieCard = ({ data }: Props) => {
                 transition
                 hover:bg-neutral-300
                 "
-              onClick={() => {}}
+              onClick={() => {
+                router.push(`/watch/${data?.id}`)
+              }}
             >
               <BsFillPlayFill size={30} />
             </div>
