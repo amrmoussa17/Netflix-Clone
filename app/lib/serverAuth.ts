@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth"
 import prisma from "@/prisma/client"
-import { authOptions } from "../api/auth/[...nextauth]/route"
+import authOptions from "./AuthOptions"
 
 const serverAuth = async () => {
   const session = await getServerSession(authOptions)
